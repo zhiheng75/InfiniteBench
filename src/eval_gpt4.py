@@ -1,3 +1,5 @@
+import os
+
 from openai import OpenAI
 import tiktoken
 from pathlib import Path
@@ -10,8 +12,12 @@ from eval_utils import (
 )
 import time
 from args import parse_args
+import dotenv
 
-api_key = ""
+dotenv.load_dotenv()
+
+api_key = os.getenv("OPENAI_API_KEY", None)
+assert api_key
 org_id = ""
 
 

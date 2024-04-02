@@ -8,3 +8,4 @@ accelerate==0.20.3
 evaluate==0.4.1
 #gzip
 xopen
+python-dotenv
